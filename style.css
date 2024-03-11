@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+    --gradRain: linear-gradient(to bottom,#00A6FB,#0582CA,#006494,#003554,#051923) fixed;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    
+}
+body{
+    background: black;
+}
+
+video{
+    position: absolute;
+    height: 100vh;
+    
+    z-index: -1;
+    
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+.logo{
+    color: white;
+    font-size: 4rem;
+    margin-left: 1.5rem;
+    font-weight: 700;
+    transition: 0.2s;
+}
+.logo:hover{
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+}
+.wbox{
+    z-index: 1;
+    /* background: var(--gradRain); */
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    width: 340px;
+    max-height: 650px;
+    /* border: 3px solid white; */
+    border-radius: 1rem;
+    padding: 20px 10px;
+    margin-right: 0.7rem;
+    color: white;
+    
+}
+.searchbox{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.searchbox input{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 0.9rem 1.5rem;
+    border-radius: 1.9rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    flex: 1;
+}
+.searchbox button{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+}
+
+.weather{
+    text-align: center;
+}
+
+.weather-icon{
+    width: 12rem;
+}
+.temp{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: -1.2rem;
+}
+
+.degbtn{
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-size: 3rem;
+    font-weight: 500;
+    color: white;
+    transition:all 0.25s ease-out;
+}
+.degbtn:hover{
+    border-color:#f1f55c;
+    color:green;
+    transform: translateY(-0.15em);
+    cursor:pointer;
+}
+.city{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: -1.5rem;
+}
+
+.hum,.wind{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start
+
+}
+.hum img,.wind img{
+    margin-left: 1rem;
+    margin-right: 2rem;
+    width: 4.5rem;
+}
+.humidity, .windspeed{
+    font-size: 2rem;
+    margin-bottom: -0.5rem;
+}
+.hum{
+    margin-top: 2.5rem;
+    margin-bottom:2.5rem;
+}
+.error{
+    text-align: center;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
